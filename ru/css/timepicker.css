@@ -1,0 +1,95 @@
+.timepicker {
+  position: absolute;
+  z-index: 1000;
+  float: left;
+  width: 160px;
+  padding-bottom: 5px;
+  margin: 4px 0 0 0;
+  list-style: none;
+  font-size: 14px;
+  text-align: center;
+  border-radius: 10px;
+  background: rgba(215, 213, 220, 0.2);   
+  backdrop-filter: blur(25px);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+.timepicker .icon-up {
+  background-image: url("../button/up.png");
+}
+.timepicker .icon-down {
+  background-image: url("../button/down.png");
+}
+.timepicker .icon-up,
+.timepicker .icon-down {
+  display: inline-block;
+  width: 55px;
+  height: 38px;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: 45%;
+  opacity: .4;
+  cursor: pointer;
+}
+.timepicker .icon-up:hover,
+.timepicker .icon-down:hover {
+  opacity: .8;
+  filter: drop-shadow(0 0 10px rgba(0, 0, 0, 1));
+}
+.timepicker .cell-2 {
+  float: left;
+  width: 20%;
+  min-height: 14px;
+  cursor: default;
+}
+.timepicker .cell-4 {
+  width: 40%;
+  float: left;
+}
+.timepicker .handle,
+.timepicker .text {
+  position: relative;
+}
+.timepicker .chose-all {
+  position: relative;
+  margin: 0 10px 0 10px;
+}
+.timepicker .chose-all .text {
+  font: bold 18px/22px arial, sans-serif;
+}
+.timepicker a {
+  color: #F8F8F8;
+  text-decoration: none;
+}
+.timepicker .text {
+  color: #F8F8F8;
+}
+.timepicker .text a {
+  color: #F8F8F8;
+}
+.timepicker .text a:active,
+.timepicker .text a:focus,
+.timepicker .text a:hover {
+  color: #F8F8F8;
+  text-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+}
+.timepicker ul {
+  list-style: none;
+  padding: 0;
+  margin: 0 5px;
+}
+.timepicker li.cell-2 {
+  padding: 3px 0;
+  cursor: pointer;
+  color: #F8F8F8;
+}
+.timepicker li.cell-2:hover {
+  border-radius: 5px;
+  background: rgba(215, 213, 220, 0.2);
+  backdrop-filter: blur(25px);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  color: #F8F8F8;
+}
+.timepicker,
+.timepicker * {
+  font-family: Helvetica, Arial, sans-serif;
+}

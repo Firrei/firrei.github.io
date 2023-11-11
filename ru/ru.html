@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="../ru/css/ru.css">
+    <link rel='stylesheet' href='../ru/css/datepicker.min.css'>
+    <script src="../ru/js/jquery-3.2.1.slim.min.js"></script>
+    <link rel="stylesheet" href="../ru/css/timepicker.css">
+    <script src="../ru/js/timepicker.js"></script>
+    <link rel="stylesheet" href="../ru/css/button.css">
+    <title>TimeSlot</title>
+</head>
+<body>
+    <div class="ru" id="ru">
+        <div class="center" id="center">
+            <input type="text" class="datepicker_input" readonly  required placeholder="Дата">
+            <input type="text" class="timepicker_input" readonly required placeholder="Время">
+            <button>Далее
+                <div class="arrow-wrapper">
+                    <div class="arrow"></div>
+                </div>
+            </button>
+            <div class="container" id="container"></div>
+        </div>
+    </div>
+    <script src="../ru/js/three.r134.min.js"></script>
+    <script src="../ru/js/vanta.net.min.js"></script>
+    <script src="../ru/js/ru.js"></script>
+    <script src="../ru/js/bootstrap.bundle.min.js"></script>
+    <script src='../ru/js/datepicker-full.min.js'></script>
+    <script src='../ru/js/pastdate.js'></script>
+    <script src='../ru/js/controll.js'></script>
+    <script>
+    $('input.timepicker_input').timepicker();
+    </script>
+    <script>
+        const getDatePickerTitle = elem => {
+            const label = elem.nextElementSibling;
+            let titleText = '';
+            if (label && label.tagName === 'LABEL') {
+                titleText = label.textContent;
+            } 
+            else {
+                titleText = elem.getAttribute('aria-label') || '';
+            }
+            return titleText;
+        }
+        const elems = document.querySelectorAll('.datepicker_input');
+        for (const elem of elems) {
+            const datepicker = new Datepicker(elem, {
+            'format': 'dd.mm.yyyy',
+            title: getDatePickerTitle(elem)
+        });
+    }
+    </script>
+</body>
+</html>
